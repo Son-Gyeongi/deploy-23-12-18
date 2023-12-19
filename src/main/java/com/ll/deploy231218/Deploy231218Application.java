@@ -29,9 +29,7 @@ public class Deploy231218Application {
     @GetMapping("/new")
     @ResponseBody
     public Article newArticle() {
-        Article article = articleRepository.save(
-                articleRepository.save(new Article("제목"))
-        );
+        Article article = articleRepository.save(new Article("제목"));
 
         return article;
     }
